@@ -3,7 +3,7 @@
 /*
    Main sketch, global variable declarations
    @title WLED project sketch
-   @version 0.11.0
+   @version 0.11.0-custom
    @author Christian Schwinne
  */
 
@@ -46,7 +46,7 @@
 // filesystem specific debugging
 //#define WLED_DEBUG_FS
 
-// Library inclusions. 
+// Library inclusions.
 #include <Arduino.h>
 #ifdef ESP8266
   #include <ESP8266WiFi.h>
@@ -173,7 +173,7 @@
 #endif
 
 // Global Variable definitions
-WLED_GLOBAL char versionString[] _INIT("0.11.0");
+WLED_GLOBAL char versionString[] _INIT("0.11.0-custom");
 #define WLED_CODENAME "Mirai"
 
 // AP and OTA default passwords (for maximum security change them!)
@@ -183,7 +183,7 @@ WLED_GLOBAL char otaPass[33] _INIT(DEFAULT_OTA_PASS);
 // Hardware CONFIG (only changeble HERE, not at runtime)
 // LED strip pin, button pin and IR pin changeable in NpbWrapper.h!
 
-//WLED_GLOBAL byte presetToApply _INIT(0); 
+//WLED_GLOBAL byte presetToApply _INIT(0);
 
 #if AUXPIN >= 0
 WLED_GLOBAL byte auxDefaultState _INIT(0);                         // 0: input 1: high 2: low
